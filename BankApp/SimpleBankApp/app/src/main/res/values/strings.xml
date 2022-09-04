@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Simple Bank App</string>
+
+    <!-- Labels -->
+    <string name="lbl_account_number_text">Account Number</string>
+    <string name="lbl_balance_text">Balance</string>
+    <string name="lbl_amount_text">Amount</string>
+    <string name="lbl_main_text">Simple Bank Application</string>
+    <!-- buttons -->
+    <string name="btn_withdraw_text">Withdraw</string>
+    <string name="btn_deposit_text">Deposit</string>
+    <string name="btn_create_text">Create</string>
+    <string name="btn_check_text">Balance</string>
+    <string name="rad_checking_text">Checking</string>
+    <string name="rad_savings_text">Savings</string>
+
+</resources>

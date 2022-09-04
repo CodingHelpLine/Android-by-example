@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="20dp"
+    >
+
+    <TextView
+        android:id="@+id/lblMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_main_text"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/lblAccountNumber"
+        />
+
+    <TextView
+        android:id="@+id/lblAccountNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_account_number_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblMain"
+        app:layout_constraintBottom_toTopOf="@+id/txtAccountNumber"
+        />
+
+    <EditText
+        android:id="@+id/txtAccountNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblAccountNumber"
+        app:layout_constraintBottom_toTopOf="@+id/lblAmount"
+        ></EditText>
+
+    <TextView
+        android:id="@+id/lblAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_amount_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAccountNumber"
+        app:layout_constraintBottom_toTopOf="@+id/txtAmount"
+        />
+
+    <EditText
+        android:id="@+id/txtAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblAmount"
+        app:layout_constraintBottom_toTopOf="@+id/lblBalance"
+        ></EditText>
+
+    <TextView
+        android:id="@+id/lblBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_balance_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAmount"
+        app:layout_constraintBottom_toTopOf="@+id/txtBalance"
+        />
+
+    <EditText
+        android:id="@+id/txtBalance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblBalance"
+        app:layout_constraintBottom_toTopOf="@+id/buttonGroup"
+        ></EditText>
+
+    <RadioGroup
+        android:id="@+id/buttonGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtBalance"
+        app:layout_constraintBottom_toTopOf="@+id/btnCreate"
+        >
+
+        <RadioButton
+            android:id="@+id/radChecking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rad_checking_text"
+            android:checked="true"
+            ></RadioButton>
+
+        <RadioButton
+            android:id="@+id/radSavings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rad_savings_text"
+            ></RadioButton>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnCreate"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/btn_create_text"
+        app:layout_constraintEnd_toStartOf="@+id/btnCheck"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonGroup"
+        app:layout_constraintBottom_toTopOf="@+id/btnDeposit"
+        android:onClick="createAccount"
+
+        ></Button>
+
+    <Button
+        android:id="@+id/btnCheck"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/btn_check_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnCreate"
+        app:layout_constraintTop_toBottomOf="@+id/buttonGroup"
+        app:layout_constraintBottom_toTopOf="@+id/btnWithdraw"
+        android:onClick="checkBalance"
+        ></Button>
+
+
+    <Button
+        android:id="@+id/btnDeposit"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/btn_deposit_text"
+        app:layout_constraintEnd_toStartOf="@+id/btnWithdraw"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCreate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:onClick="doDeposit"
+        ></Button>
+
+    <Button
+        android:id="@+id/btnWithdraw"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/btn_withdraw_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnDeposit"
+        app:layout_constraintTop_toBottomOf="@+id/btnCheck"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:onClick="doWithdraw"
+        ></Button>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
