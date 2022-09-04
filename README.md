@@ -28,11 +28,6 @@ Java. Each application will address various java programming topics.
 * File IO (JSON, XML, Text, CSV, Excel, Google Sheets)
 * Asynchronous Programming with async and await
 * Attributes
-* Collections (Lists, Dictionaries, Sets)
-* Covariance and contravariance
-* Expression Tree
-* Iterators
-* LINQ (Language Integrated Queries)
 * Functional Programming
 * Reflection
 * Serialization. 
