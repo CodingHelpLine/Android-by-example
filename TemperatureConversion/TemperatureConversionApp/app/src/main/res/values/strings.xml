@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Temperature Conversion App</string>
+
+    <!-- Labels -->
+    <string name="lbl_main">Temperature Conversion</string>
+    <string name="lbl_temperature_text">Enter Temperature</string>
+    <string name="lbl_output_text">Converted Temperature</string>
+
+    <!-- Buttons -->
+    <string name="btn_c_to_f">C to F</string>
+    <string name="btn_f_to_c">F to C</string>
+    <string name="btn_c_to_k">C to K</string>
+    <string name="btn_k_to_c">K to C</string>
+    <string name="btn_f_to_k">F to K</string>
+    <string name="btn_k_to_f">K to F</string>
+</resources>

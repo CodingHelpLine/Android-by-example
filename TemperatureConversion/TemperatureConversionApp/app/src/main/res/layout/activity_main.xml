@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/lblMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_main"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/lblTemperature"
+    />
+
+    <TextView
+        android:id="@+id/lblTemperature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_temperature_text"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblMain"
+        app:layout_constraintBottom_toTopOf="@id/txtTemperature"
+        />
+
+    <EditText
+        android:id="@+id/txtTemperature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblTemperature"
+        app:layout_constraintBottom_toTopOf="@id/lblOutputLabel"
+        ></EditText>
+
+    <TextView
+        android:id="@+id/lblOutputLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_output_text"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTemperature"
+        app:layout_constraintBottom_toTopOf="@id/lblOutput"
+        />
+
+    <TextView
+        android:id="@+id/lblOutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="16dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/lblOutputLabel"
+        app:layout_constraintBottom_toTopOf="@id/btnCToF"
+        />
+
+    <Button
+        android:id="@+id/btnCToF"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:padding="5dp"
+        android:textStyle="bold"
+        android:text="@string/btn_c_to_f"
+        app:layout_constraintEnd_toStartOf="@id/btnFToC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblOutput"
+        app:layout_constraintBottom_toTopOf="@id/btnCToK"
+        android:onClick="convertCToF"
+        ></Button>
+
+    <Button
+        android:id="@+id/btnFToC"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:padding="5dp"
+        android:textStyle="bold"
+        android:text="@string/btn_f_to_c"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnCToF"
+        app:layout_constraintTop_toBottomOf="@id/lblOutput"
+        app:layout_constraintBottom_toTopOf="@id/btnKToC"
+        android:onClick="convertFToC"
+        ></Button>
+
+
+    <Button
+        android:id="@+id/btnCToK"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:padding="5dp"
+        android:textStyle="bold"
+        android:text="@string/btn_c_to_k"
+        app:layout_constraintEnd_toStartOf="@id/btnKToC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnCToF"
+        app:layout_constraintBottom_toTopOf="@id/btnFToK"
+        android:onClick="convertCToK"
+        ></Button>
+
+    <Button
+        android:id="@+id/btnKToC"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:padding="5dp"
+        android:textStyle="bold"
+        android:text="@string/btn_k_to_c"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnCToK"
+        app:layout_constraintTop_toBottomOf="@id/btnFToC"
+        app:layout_constraintBottom_toTopOf="@id/btnKToF"
+        android:onClick="convertKToC"
+        ></Button>
+
+    <Button
+        android:id="@+id/btnFToK"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:padding="5dp"
+        android:textStyle="bold"
+        android:text="@string/btn_f_to_k"
+        app:layout_constraintEnd_toStartOf="@id/btnKToF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnCToK"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:onClick="convertFToK"
+        ></Button>
+
+    <Button
+        android:id="@+id/btnKToF"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:padding="5dp"
+        android:textStyle="bold"
+        android:text="@string/btn_k_to_f"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnFToK"
+        app:layout_constraintTop_toBottomOf="@id/btnKToC"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:onClick="convertKToF"
+        ></Button>
+</androidx.constraintlayout.widget.ConstraintLayout>
